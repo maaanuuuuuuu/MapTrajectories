@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MapTrajectories/static/css/main.13918445.chunk.css",
-    "main.js": "/MapTrajectories/static/js/main.e2908fbd.chunk.js",
-    "main.js.map": "/MapTrajectories/static/js/main.e2908fbd.chunk.js.map",
+    "main.css": "/MapTrajectories/static/css/main.9b20b2d0.chunk.css",
+    "main.js": "/MapTrajectories/static/js/main.0dd951f6.chunk.js",
+    "main.js.map": "/MapTrajectories/static/js/main.0dd951f6.chunk.js.map",
     "runtime-main.js": "/MapTrajectories/static/js/runtime-main.2251fc6b.js",
     "runtime-main.js.map": "/MapTrajectories/static/js/runtime-main.2251fc6b.js.map",
     "static/js/2.c28cbd2a.chunk.js": "/MapTrajectories/static/js/2.c28cbd2a.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.b996c321.chunk.js": "/MapTrajectories/static/js/3.b996c321.chunk.js",
     "static/js/3.b996c321.chunk.js.map": "/MapTrajectories/static/js/3.b996c321.chunk.js.map",
     "index.html": "/MapTrajectories/index.html",
-    "static/css/main.13918445.chunk.css.map": "/MapTrajectories/static/css/main.13918445.chunk.css.map",
+    "static/css/main.9b20b2d0.chunk.css.map": "/MapTrajectories/static/css/main.9b20b2d0.chunk.css.map",
     "static/js/2.c28cbd2a.chunk.js.LICENSE.txt": "/MapTrajectories/static/js/2.c28cbd2a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2251fc6b.js",
     "static/js/2.c28cbd2a.chunk.js",
-    "static/css/main.13918445.chunk.css",
-    "static/js/main.e2908fbd.chunk.js"
+    "static/css/main.9b20b2d0.chunk.css",
+    "static/js/main.0dd951f6.chunk.js"
   ]
 }
