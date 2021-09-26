@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
 import { ITrajectory } from '../../context/TrajectoriesContext';
 import distinctColors from 'distinct-colors'
+import { useMap } from './useMap';
 
 export interface IMapProps {
     displayedTrajectories: ITrajectory[];
@@ -9,24 +10,15 @@ export interface IMapProps {
 
 export const Map = ({displayedTrajectories, onHover}: IMapProps) => {
 
-    const svgStyles: CSSProperties = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, border: "1px solid"   };
-    const [width, height, border] = [600, 600, 10];
+    const svgStyles: CSSProperties = { border: "1px solid" };
+    const [width, height] = [800, 600];
+    
     const colors: string[] = [];
     distinctColors().map((c) => {
         colors.push(c.name())
     });
-    // const normalize = (value: number) => Math.floor(value*50);
 
-    const normalizeX = (value: number) => {
-        const biggestX = Math.max(...displayedTrajectories.map(trajectory => trajectory.points).flat().map(t => t.x));
-        
-        return Math.floor(value * (width-border)/biggestX);
-    }
-    const normalizeY = (value: number) => {
-        const biggestY = Math.max(...displayedTrajectories.map(trajectory => trajectory.points).flat().map(t => t.y));
-        
-        return Math.floor(value * (height-border)/biggestY);
-    }
+    const {normalizeX, normalizeY} = useMap(displayedTrajectories, height, width)
 
     return (
         <div className="map">
@@ -34,7 +26,6 @@ export const Map = ({displayedTrajectories, onHover}: IMapProps) => {
                 style={svgStyles}
                 width={width}
                 height={height}
-                viewBox={`0 0 ${width} ${height}`}
             >
                 {displayedTrajectories.map((trajectory, trajectoryIndex) => {
                     return (

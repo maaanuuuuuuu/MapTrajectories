@@ -1,6 +1,18 @@
-.App {
-  text-align: center;
-}
 svg > circle:hover, svg > line:hover {
   cursor: pointer; 
+}
+svg > circle {
+  transition: all 1s;
+}
+.rightPanel ul {
+  list-style: none;
+}
+.layout {
+  display: flex;
+}
+.leftPanel {
+  flex: 0 0 65%;
+}
+.rightPanel {
+  flex: 1;
 }

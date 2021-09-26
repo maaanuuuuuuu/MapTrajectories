@@ -5,20 +5,18 @@ import { ITrajectory, useTrajectoriesContext } from '../../context/TrajectoriesC
 export const MapController = () => {
 
     const allTrajectories = useTrajectoriesContext();
-    
-    const [displayedTrajectories, setDisplayedTrajectories] = useState<ITrajectory[]>(allTrajectories);
     const [infoTrajectory, setInfoTrajectory] = useState<ITrajectory|null>(null);
 
     return (
         <div className="layout">
-            <div className="leftPanel">
-                <Map displayedTrajectories={displayedTrajectories} onHover={setInfoTrajectory}/>
-            </div>
-            <div className="rightPanel">
+            <span className="leftPanel">
+                <Map displayedTrajectories={allTrajectories} onHover={setInfoTrajectory}/>
+            </span>
+            <span className="rightPanel">
                 {infoTrajectory !== null &&
                     <Controller infoTrajectory={infoTrajectory}/>
                 }
-            </div>
+            </span>
         </div>
     );
 }
