@@ -37,7 +37,7 @@ export const Map = ({displayedTrajectories, onHover}: IMapProps) => {
                                         key={trajectory.id+"_" + i}
                                         cx={normalizeX(dot.x)}
                                         cy={normalizeY(dot.y)}
-                                        r={(i === 0 || i === trajectory.points.length -1) ? 5 : 3}
+                                        r={(i === 0 || i === trajectory.points.length -1) ? 10 : 6}
                                         fill={colors[trajectoryIndex]}
                                         onMouseOver={() => onHover(trajectory)}
                                     />
@@ -48,7 +48,7 @@ export const Map = ({displayedTrajectories, onHover}: IMapProps) => {
                                             x2={normalizeX(trajectory.points[i].x)}
                                             y1={normalizeY(trajectory.points[i-1].y)}
                                             y2={normalizeY(trajectory.points[i].y)}
-                                            strokeWidth={2}
+                                            strokeWidth={5}
                                             stroke={colors[trajectoryIndex]}
                                             onMouseOver={() => onHover(trajectory)}
                                         />
