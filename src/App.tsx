@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { MapController } from './features/Map/MapController';
+import trajectories from './trajectoires.json';
+import { TrajectoriesContext } from './context/TrajectoriesContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TrajectoriesContext.Provider value={trajectories}>
+        <MapController />
+      </TrajectoriesContext.Provider>
     </div>
   );
 }
